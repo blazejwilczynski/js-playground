@@ -2,3 +2,13 @@
 // listen for click events on modal-btn and close-btn
 // when user clicks modal-btn add .open-modal to modal-overlay
 // when user clicks close-btn remove .open-modal from modal-overlay
+
+
+const modal = document.getElementById('overlay');
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        modal.classList.toggle('open-modal');
+    })
+})
